@@ -1,0 +1,10 @@
+import unittest
+from modules.header_analyzer import analyze_headers
+
+class TestHeaderAnalyzer(unittest.TestCase):
+    def test_analyze_headers(self):
+        result = analyze_headers("http://example.com")
+        self.assertIsInstance(result, list)
+
+if __name__ == "__main__":
+    unittest.main()
