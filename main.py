@@ -5,7 +5,7 @@ from modules.header_analyzer import analyze_http_headers
 from modules.cms_detector import detect_cms
 from utils.report_generator import generate_html_report, save_report_as_json
 
-# Configuração de logging
+# Logging configuration
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 class VulnerabilityScanner:
@@ -37,7 +37,7 @@ class VulnerabilityScanner:
 
 def format_target_url(target):
     """
-    Adiciona 'http://' ao target se ele não contiver um esquema.
+    Add 'http://' to target if it does not contain a schema.
     """
     if not target.startswith(("http://", "https://")):
         return f"http://{target}"
@@ -53,7 +53,7 @@ def main():
     
     args = parser.parse_args()
     
-    # Formatar a URL do target
+    # Format the target URL
     target = format_target_url(args.target)
     
     scanner = VulnerabilityScanner(target)
@@ -65,7 +65,7 @@ def main():
     if args.detect_cms:
         scanner.detect_cms()
     
-    # Gerar relatório
+    # Report generator
     if args.report_type == "html":
         generate_html_report(
             target=target,
