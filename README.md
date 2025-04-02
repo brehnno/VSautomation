@@ -84,4 +84,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-- **Your Name** - brehnno (https://github.com/brehnno)
+- **Breno Henrique** - brehnno (https://github.com/brehnno)
